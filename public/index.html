@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PropJoiner — Sell Your Home Fast</title>
+  <meta name="description" content="PropJoiner connects home sellers to trusted buyers and instant cash offer funnels."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+  <header class="container header">
+    <div class="logo">Prop<span>Joiner</span></div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="#how">How It Works</a>
+      <a href="#contact">Contact</a>
+      <a href="/admin">Admin</a>
+    </nav>
+  </header>
+
+  <section class="hero container">
+    <h1>Sell Your Home Fast in the USA</h1>
+    <p>Get an instant, no-obligation offer from trusted buyers. Seamless, secure, and fast.</p>
+    <div class="cta-row">
+      <button class="btn btn-yellow" data-btn="sell-fast">Sell My House Faster</button>
+      <button class="btn btn-green" data-btn="analysis">Get Analysis</button>
+      <button class="btn btn-orange" data-btn="cash-offer">Get Cash Offer</button>
+    </div>
+
+    <div class="card">
+      <h3>Create Account (OTP Login)</h3>
+      <div id="otp-step1">
+        <label>Mobile Number</label>
+        <input id="phone" placeholder="+1XXXXXXXXXX"/>
+        <button class="btn btn-dark" id="sendOtp">Send OTP</button>
+      </div>
+      <div id="otp-step2" class="hidden">
+        <label>Enter OTP</label>
+        <input id="otp" placeholder="6-digit code"/>
+        <label>Name (optional)</label>
+        <input id="name" placeholder="Your name"/>
+        <label>Email (optional)</label>
+        <input id="email" placeholder="you@example.com"/>
+        <button class="btn btn-dark" id="verifyOtp">Verify & Continue</button>
+      </div>
+      <p id="otpMsg"></p>
+    </div>
+  </section>
+
+  <section id="how" class="container how">
+    <h2>How it works</h2>
+    <div class="grid-3">
+      <div class="mini-card"><h4>1. Fill Details</h4><p>Create account with OTP, or click any CTA.</p></div>
+      <div class="mini-card"><h4>2. Get Offer</h4><p>We redirect you to our partner's instant offer funnel.</p></div>
+      <div class="mini-card"><h4>3. Close Fast</h4><p>Receive a fair cash offer and close quickly.</p></div>
+    </div>
+  </section>
+
+  <section id="contact" class="container contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input name="name" placeholder="Your Name" required/>
+      <input name="email" type="email" placeholder="Your Email" required/>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button class="btn btn-dark" type="submit">Send</button>
+      <span id="contactMsg"></span>
+    </form>
+  </section>
+
+  <footer class="container footer">
+    <p>© <span id="year"></span> PropJoiner. All rights reserved.</p>
+  </footer>
+
+  <script src="/main.js"></script>
+</body>
+</html>

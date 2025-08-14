@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PropJoiner Admin</title>
+  <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+  <div class="container admin">
+    <h1>Admin Dashboard</h1>
+    <div id="loginBox" class="card">
+      <h3>Admin Login</h3>
+      <input id="adminEmail" placeholder="Email"/>
+      <input id="adminPass" type="password" placeholder="Password"/>
+      <button class="btn btn-dark" id="adminLoginBtn">Login</button>
+      <p id="adminMsg"></p>
+    </div>
+
+    <div id="dash" class="hidden">
+      <div class="card">
+        <h3>Stats</h3>
+        <div class="stats">
+          <div><strong>Total Visitors</strong><div id="statVisitors">0</div></div>
+          <div><strong>Registrations</strong><div id="statUsers">0</div></div>
+          <div><strong>Redirect Clicks</strong><div id="statClicks">0</div></div>
+          <div><strong>Drop-Offs</strong><div id="statDrop">0</div></div>
+        </div>
+        <canvas id="visitsChart" width="600" height="260"></canvas>
+        <canvas id="regsChart" width="600" height="260"></canvas>
+        <canvas id="clicksChart" width="600" height="260"></canvas>
+      </div>
+
+      <div class="card">
+        <h3>Client Redirect URL</h3>
+        <input id="redirectUrl" style="width:100%"/>
+        <button class="btn btn-yellow" id="saveUrlBtn">Save URL</button>
+      </div>
+
+      <div class="card">
+        <h3>Exports</h3>
+        <a id="csvLink" class="btn btn-green" target="_blank">Download Users CSV</a>
+        <a id="pdfLink" class="btn btn-orange" target="_blank">Download Summary PDF</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/admin.js"></script>
+</body>
+</html>
