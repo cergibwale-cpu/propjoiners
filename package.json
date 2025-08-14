@@ -1,0 +1,29 @@
+{
+  "name": "propjoiner",
+  "version": "1.0.0",
+  "description": "PropJoiner - Real estate redirector with analytics and OTP registration",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js",
+    "seed-admin": "node tools/seedAdmin.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "csv-stringify": "^6.5.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "pdfkit": "^0.13.0",
+    "sqlite3": "^5.1.7",
+    "twilio": "^5.3.3",
+    "uuid": "^9.0.1"
+  }
+}
